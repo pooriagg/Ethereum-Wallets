@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <title>Wallet</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-8 offset-2 mt-5">
+                <div class="card">
+                    <div class="card-header">
+                      Deposit Ether
+                    </div>
+                    <div class="card-body">
+                      <input type="number" placeholder="Enter Ether Amount" id="ethD" class="form-control mb-3">
+                      <button type="button" class="btn btn-success btn-block" onclick="deposit()">Deposit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 offset-2 mt-5">
+                <div class="card">
+                    <div class="card-header">
+                      Withdraw Ether
+                    </div>
+                    <div class="card-body">
+                      <input type="number" placeholder="Enter Ether Amount" id="ethW" class="form-control mb-3">
+                      <input type="text" placeholder="Enter Address" id="addrW" class="form-control mb-3">
+                      <button type="button" class="btn btn-success btn-block" onclick="withdraw()">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 offset-2 mt-5">
+                <div class="card">
+                    <div class="card-header">
+                      Withdraw Ether With Valid Signature
+                    </div>
+                    <div class="card-body">
+                      <input type="number" placeholder="Enter Ether Amount" id="ethSW" class="form-control mb-3">
+                      <input type="text" placeholder="Enter Signer Address" id="signerW" class="form-control mb-3">
+                      <input type="text" placeholder="Enter Message" id="msgW" class="form-control mb-3">
+                      <input type="text" placeholder="Enter Valid Signature" id="sigW" class="form-control mb-3">
+                      <button type="button" class="btn btn-success btn-block" onclick="withdrawWithSig()">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 offset-2 mt-5">
+                <div class="card">
+                    <div class="card-header">
+                      Sign
+                    </div>
+                    <div class="card-body">
+                      <input type="text" placeholder="Enter To Address" id="toS" class="form-control mb-3">
+                      <input type="number" placeholder="Enter Ether Amount" id="amountS" class="form-control mb-3">
+                      <input type="text" placeholder="Enter Message" id="msgS" class="form-control mb-3">
+                      <button type="button" class="btn btn-outline-warning btn-block" onclick="sign()">Sign</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 offset-2 mt-5 mb-5">
+                <div class="card">
+                    <div class="card-header">
+                      Cancel Signature
+                    </div>
+                    <div class="card-body">
+                        <input type="text" placeholder="Enter To Address" id="toSC" class="form-control mb-3">
+                        <input type="number" placeholder="Enter Ether Amount" id="amountSC" class="form-control mb-3">
+                        <input type="text" placeholder="Enter Message" id="msgSC" class="form-control mb-3">
+                        <input type="text" placeholder="Enter Valid Signature" id="sigSC" class="form-control mb-3">
+                        <button type="button" class="btn btn-danger btn-block" onclick="cancelSignature()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
